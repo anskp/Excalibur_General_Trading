@@ -1,0 +1,341 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Excalibur Luxury Brand Palette */
+  --color-ivory: #FFFAF0;
+  --color-crimson: #E03F4F;
+  --color-olive: #81912F;
+  --color-gold: #F8C463;
+  --color-gold-light: #F8D98A;
+  --color-gold-dark: #D4A63D;
+  --color-ivory-dark: #F5F0E8;
+  --color-crimson-dark: #C23040;
+  --color-olive-light: #9AAC3A;
+  --color-charcoal: #1A1A2E;
+  --color-charcoal-light: #2D2D44;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #FFFAF0;
+  --foreground: #1A1A2E;
+  --card: #FFFAF0;
+  --card-foreground: #1A1A2E;
+  --popover: #FFFAF0;
+  --popover-foreground: #1A1A2E;
+  --primary: #E03F4F;
+  --primary-foreground: #FFFFFF;
+  --secondary: #81912F;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F5F0E8;
+  --muted-foreground: #6B7280;
+  --accent: #F8C463;
+  --accent-foreground: #1A1A2E;
+  --destructive: #E03F4F;
+  --border: #E8E0D4;
+  --input: #E8E0D4;
+  --ring: #F8C463;
+  --chart-1: #E03F4F;
+  --chart-2: #81912F;
+  --chart-3: #F8C463;
+  --chart-4: #1A1A2E;
+  --chart-5: #D4A63D;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-ivory text-charcoal;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4A63D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #81912F;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 250, 240, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(248, 196, 99, 0.15);
+}
+
+.glass-dark {
+  background: rgba(26, 26, 46, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(248, 196, 99, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 250, 240, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 224, 212, 0.6);
+}
+
+.glass-card-hover {
+  background: rgba(255, 250, 240, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(248, 196, 99, 0.3);
+  box-shadow: 0 8px 32px rgba(248, 196, 99, 0.08);
+}
+
+/* Premium gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F8C463 0%, #D4A63D 50%, #F8C463 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-crimson {
+  background: linear-gradient(135deg, #E03F4F 0%, #C23040 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium border glow */
+.border-glow-gold {
+  border: 1px solid rgba(248, 196, 99, 0.3);
+  box-shadow: 0 0 20px rgba(248, 196, 99, 0.05);
+}
+
+.border-glow-crimson {
+  border: 1px solid rgba(224, 63, 79, 0.3);
+  box-shadow: 0 0 20px rgba(224, 63, 79, 0.05);
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(248, 196, 99, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out 1s infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(248, 196, 99, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(248, 196, 99, 0.2); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Smooth horizontal scroll */
+.scroll-smooth-horizontal {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-smooth-horizontal::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scroll-smooth-horizontal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-smooth-horizontal::-webkit-scrollbar-thumb {
+  background: rgba(248, 196, 99, 0.3);
+  border-radius: 2px;
+}
+
+/* Dot pattern overlay */
+.dot-pattern {
+  background-image: radial-gradient(rgba(248, 196, 99, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(232, 224, 212, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 224, 212, 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Premium capsule shape */
+.capsule {
+  border-radius: 9999px;
+}
+
+/* Premium line */
+.line-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #F8C463 50%, transparent 100%);
+}
+
+.line-crimson {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #E03F4F 50%, transparent 100%);
+}
+
+/* Hero gradient overlay */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 250, 240, 0.95) 0%,
+    rgba(255, 250, 240, 0.8) 40%,
+    rgba(248, 196, 99, 0.1) 100%
+  );
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(248, 196, 99, 0.3), rgba(232, 224, 212, 0.3), rgba(248, 196, 99, 0.3), transparent);
+}
+
+/* Number counter font */
+.font-display {
+  font-family: 'Geist', system-ui, sans-serif;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth page transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Map route animation */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-dash {
+  animation: dash 3s ease-in-out forwards;
+}
+
+/* Premium card shine */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(248, 196, 99, 0.03) 45%,
+    rgba(248, 196, 99, 0.06) 50%,
+    rgba(248, 196, 99, 0.03) 55%,
+    transparent 60%
+  );
+  transform: rotate(0deg);
+  transition: transform 0.6s ease;
+}
+
+.card-shine:hover::before {
+  transform: rotate(180deg);
+}
