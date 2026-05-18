@@ -1,105 +1,83 @@
 'use client';
 
-import {
-  Globe,
-  Droplets,
-  Factory,
-  Truck,
-  Package,
-  Building2,
-  Navigation,
-  Handshake,
-} from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const solutions = [
   {
-    icon: Globe,
     title: 'Import & Export',
     description:
       'Seamless cross-border trade facilitation with comprehensive customs management and documentation.',
-    color: 'crimson',
+    image: '/images/solutions/import-export.png',
     span: 'lg:col-span-2 lg:row-span-2',
     size: 'large',
+    overlay: 'from-charcoal/80 via-charcoal/50 to-transparent',
+    textPosition: 'bottom',
   },
   {
-    icon: Droplets,
     title: 'Oil & Gas',
     description: 'Premium petroleum products and energy commodities.',
-    color: 'olive',
+    image: '/images/solutions/oil-gas.png',
     span: 'lg:col-span-1',
     size: 'small',
+    overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
+    textPosition: 'bottom',
   },
   {
-    icon: Factory,
     title: 'Industrial Supply',
     description: 'Heavy machinery and industrial equipment procurement.',
-    color: 'gold',
+    image: '/images/solutions/industrial-supply.png',
     span: 'lg:col-span-1',
     size: 'small',
+    overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
+    textPosition: 'bottom',
   },
   {
-    icon: Package,
     title: 'Commodity Trading',
     description: 'Strategic commodity sourcing and market intelligence.',
-    color: 'olive',
+    image: '/images/solutions/commodity-trading.png',
     span: 'lg:col-span-1',
     size: 'small',
+    overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
+    textPosition: 'bottom',
   },
   {
-    icon: Truck,
     title: 'Logistics Solutions',
     description: 'End-to-end supply chain management and freight solutions.',
-    color: 'crimson',
+    image: '/images/solutions/logistics.png',
     span: 'lg:col-span-2',
     size: 'wide',
+    overlay: 'from-charcoal/80 via-charcoal/40 to-transparent',
+    textPosition: 'bottom',
   },
   {
-    icon: Building2,
     title: 'Infrastructure Materials',
     description: 'Construction materials and structural components.',
-    color: 'gold',
+    image: '/images/solutions/infrastructure.png',
     span: 'lg:col-span-1',
     size: 'small',
+    overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
+    textPosition: 'bottom',
   },
   {
-    icon: Navigation,
     title: 'Procurement',
     description: 'Strategic sourcing and vendor management.',
-    color: 'olive',
+    image: '/images/solutions/procurement.png',
     span: 'lg:col-span-1',
     size: 'small',
+    overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
+    textPosition: 'bottom',
   },
   {
-    icon: Handshake,
     title: 'Global Partnerships',
     description: 'Building lasting alliances across international markets.',
-    color: 'crimson',
+    image: '/images/solutions/partnerships.png',
     span: 'lg:col-span-2',
     size: 'wide',
+    overlay: 'from-charcoal/80 via-charcoal/40 to-transparent',
+    textPosition: 'bottom',
   },
 ];
-
-const colorMap: Record<string, { bg: string; icon: string; border: string; glow: string }> = {
-  crimson: {
-    bg: 'bg-crimson/8',
-    icon: 'bg-crimson/12 text-crimson',
-    border: 'border-crimson/10 hover:border-crimson/25',
-    glow: 'hover:shadow-crimson/8',
-  },
-  olive: {
-    bg: 'bg-olive/8',
-    icon: 'bg-olive/12 text-olive',
-    border: 'border-olive/10 hover:border-olive/25',
-    glow: 'hover:shadow-olive/8',
-  },
-  gold: {
-    bg: 'bg-gold/8',
-    icon: 'bg-gold/12 text-gold-dark',
-    border: 'border-gold/10 hover:border-gold/25',
-    glow: 'hover:shadow-gold/8',
-  },
-};
 
 export function BentoGrid() {
   return (
@@ -126,34 +104,41 @@ export function BentoGrid() {
         {/* Bento Grid */}
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
           {solutions.map((solution) => {
-            const colors = colorMap[solution.color];
-            const Icon = solution.icon;
             const isLarge = solution.size === 'large';
             const isWide = solution.size === 'wide';
 
             return (
               <StaggerItem key={solution.title} className={solution.span}>
                 <div
-                  className={`group relative h-full rounded-3xl ${colors.bg} border ${colors.border} p-6 lg:p-8 transition-all duration-500 ${colors.glow} hover:shadow-lg hover:-translate-y-1 card-shine cursor-pointer overflow-hidden`}
+                  className={`group relative h-full rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-gold/20 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1`}
                 >
-                  {/* Background decorative gradient */}
-                  <div className={`absolute top-0 right-0 w-40 h-40 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ${
-                    solution.color === 'crimson' ? 'bg-crimson/8' :
-                    solution.color === 'olive' ? 'bg-olive/8' : 'bg-gold/8'
-                  }`} />
+                  {/* Background Image */}
+                  <div
+                    className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 ${isLarge ? 'min-h-[400px] lg:min-h-[480px]' : isWide ? 'min-h-[240px] lg:min-h-[280px]' : 'min-h-[260px] lg:min-h-[300px]'}`}
+                    style={{ backgroundImage: `url('${solution.image}')` }}
+                  />
 
-                  <div className="relative z-10">
-                    {/* Icon */}
-                    <div
-                      className={`inline-flex items-center justify-center w-12 h-12 rounded-2xl ${colors.icon} mb-5 transition-transform duration-300 group-hover:scale-110`}
-                    >
-                      <Icon className="w-5 h-5" />
+                  {/* Gradient Overlay */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t ${solution.overlay}`}
+                  />
+
+                  {/* Top accent glow */}
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+
+                  {/* Content */}
+                  <div className={`relative z-10 flex flex-col justify-end h-full p-6 lg:p-8 ${isLarge ? 'min-h-[400px] lg:min-h-[480px]' : isWide ? 'min-h-[240px] lg:min-h-[280px]' : 'min-h-[260px] lg:min-h-[300px]'}`}>
+                    {/* Category badge */}
+                    <div className="mb-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-[10px] font-semibold uppercase tracking-[0.15em] text-ivory/80">
+                        {isLarge ? 'Core Business' : isWide ? 'Enterprise' : 'Solution'}
+                      </span>
                     </div>
 
                     {/* Title */}
                     <h3
-                      className={`font-bold text-charcoal mb-2 ${
-                        isLarge ? 'text-2xl lg:text-3xl' : 'text-lg'
+                      className={`font-bold text-white mb-2 ${
+                        isLarge ? 'text-2xl lg:text-3xl' : 'text-lg lg:text-xl'
                       }`}
                     >
                       {solution.title}
@@ -161,7 +146,7 @@ export function BentoGrid() {
 
                     {/* Description */}
                     <p
-                      className={`text-charcoal/50 leading-relaxed ${
+                      className={`text-ivory/60 leading-relaxed ${
                         isLarge ? 'text-sm lg:text-base max-w-md' : 'text-sm'
                       }`}
                     >
@@ -170,45 +155,81 @@ export function BentoGrid() {
 
                     {/* Large card extra content */}
                     {isLarge && (
-                      <div className="mt-8 flex items-center gap-4">
-                        <div className="flex -space-x-2">
-                          {['bg-crimson', 'bg-olive', 'bg-gold', 'bg-charcoal'].map((c, i) => (
-                            <div
-                              key={i}
-                              className={`w-8 h-8 rounded-full ${c} border-2 border-ivory flex items-center justify-center`}
-                            >
-                              <span className="text-[8px] text-white font-bold">
-                                {String.fromCharCode(65 + i)}
-                              </span>
-                            </div>
-                          ))}
+                      <div className="mt-6 flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div className="flex -space-x-2">
+                            {[
+                              'bg-crimson',
+                              'bg-olive',
+                              'bg-gold',
+                              'bg-charcoal-light',
+                            ].map((c, i) => (
+                              <div
+                                key={i}
+                                className={`w-8 h-8 rounded-full ${c} border-2 border-charcoal/40 flex items-center justify-center`}
+                              >
+                                <span className="text-[8px] text-white font-bold">
+                                  {String.fromCharCode(65 + i)}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                          <div>
+                            <p className="text-xs font-medium text-ivory/80">
+                              40+ Countries
+                            </p>
+                            <p className="text-[10px] text-ivory/40">
+                              Active trade routes
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="text-xs font-medium text-charcoal/70">40+ Countries</p>
-                          <p className="text-[10px] text-charcoal/40">Active trade routes</p>
+                        <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+                          <ArrowUpRight className="w-4 h-4 text-gold" />
                         </div>
                       </div>
                     )}
 
                     {/* Wide card metrics */}
                     {isWide && (
-                      <div className="mt-6 flex items-center gap-6">
+                      <div className="mt-5 flex items-center gap-6">
                         <div>
-                          <p className="text-xl font-bold text-charcoal">
-                            {solution.title === 'Logistics Solutions' ? '186' : '320+'}
+                          <p className="text-xl font-bold text-white">
+                            {solution.title === 'Logistics Solutions'
+                              ? '186'
+                              : '320+'}
                           </p>
-                          <p className="text-xs text-charcoal/40">
-                            {solution.title === 'Logistics Solutions' ? 'Active Routes' : 'Global Partners'}
+                          <p className="text-[11px] text-ivory/50">
+                            {solution.title === 'Logistics Solutions'
+                              ? 'Active Routes'
+                              : 'Global Partners'}
                           </p>
                         </div>
-                        <div className="w-px h-8 bg-border" />
+                        <div className="w-px h-8 bg-white/15" />
                         <div>
-                          <p className="text-xl font-bold text-charcoal">
-                            {solution.title === 'Logistics Solutions' ? '99.7%' : '15+'}
+                          <p className="text-xl font-bold text-white">
+                            {solution.title === 'Logistics Solutions'
+                              ? '99.7%'
+                              : '15+'}
                           </p>
-                          <p className="text-xs text-charcoal/40">
-                            {solution.title === 'Logistics Solutions' ? 'On-time Delivery' : 'Years of Trust'}
+                          <p className="text-[11px] text-ivory/50">
+                            {solution.title === 'Logistics Solutions'
+                              ? 'On-time Delivery'
+                              : 'Years of Trust'}
                           </p>
+                        </div>
+                        <div className="ml-auto">
+                          <div className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+                            <ArrowUpRight className="w-4 h-4 text-gold" />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Small card arrow */}
+                    {!isLarge && !isWide && (
+                      <div className="mt-4">
+                        <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+                          <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
                         </div>
                       </div>
                     )}
