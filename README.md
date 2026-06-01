@@ -1,13 +1,13 @@
 # Excalibur (Next.js + Tailwind + Shadcn UI)
 
-This is a modern web application built with [Next.js](https://nextjs.org/), leveraging a robust tech stack designed for scalability, type safety, and beautiful user interfaces.
+This is a modern web application built with [Next.js](https://nextjs.org/), leveraging a robust tech stack designed for scalability and beautiful user interfaces.
 
 ## 🚀 Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components:** [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Language:** [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - **Database ORM:** [Prisma](https://www.prisma.io/)
 - **State Management:** [Zustand](https://zustand-demo.pmnd.rs/) & [React Query](https://tanstack.com/query/latest)
 - **Validation:** [Zod](https://zod.dev/) & React Hook Form
