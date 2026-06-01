@@ -4,12 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 const navLinks = [
-    { label: 'Solutions', href: '#solutions' },
-    { label: 'Services', href: '#services' },
-    { label: 'Global Reach', href: '#global' },
-    { label: 'Industries', href: '#industries' },
-    { label: 'About', href: '#trust' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Products', href: '/products' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
 ];
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -48,7 +46,7 @@ export function Navbar() {
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <Link href="#contact" className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-crimson text-white text-sm font-medium rounded-full hover:bg-crimson-dark transition-all duration-300 shadow-lg shadow-crimson/20 hover:shadow-crimson/30 hover:-translate-y-0.5">
+            <Link href="/contact" className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-crimson text-white text-sm font-medium rounded-full hover:bg-crimson-dark transition-all duration-300 shadow-lg shadow-crimson/20 hover:shadow-crimson/30 hover:-translate-y-0.5">
               Get Started
               <ChevronRight className="w-3.5 h-3.5"/>
             </Link>
@@ -70,7 +68,7 @@ export function Navbar() {
                   </Link>
                 </motion.div>))}
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-4">
-                <Link href="#contact" onClick={() => setMobileOpen(false)} className="flex items-center justify-center gap-2 w-full px-5 py-4 bg-crimson text-white font-medium rounded-2xl shadow-lg shadow-crimson/20">
+                <Link href="/contact" onClick={() => setMobileOpen(false)} className="flex items-center justify-center gap-2 w-full px-5 py-4 bg-crimson text-white font-medium rounded-2xl shadow-lg shadow-crimson/20">
                   Get Started
                   <ChevronRight className="w-4 h-4"/>
                 </Link>

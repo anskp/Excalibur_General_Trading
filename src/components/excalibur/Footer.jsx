@@ -3,25 +3,25 @@ import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 import Link from 'next/link';
 const footerLinks = {
     Solutions: [
-        { label: 'Import & Export', href: '#solutions' },
-        { label: 'Commodity Trading', href: '#solutions' },
-        { label: 'Oil & Gas', href: '#solutions' },
-        { label: 'Industrial Supply', href: '#solutions' },
-        { label: 'Procurement', href: '#solutions' },
+        { label: 'Kitchen Equipment', href: '/products#kitchen-equipment' },
+        { label: 'Mechanical Equipment', href: '/products#mechanical-equipment' },
+        { label: 'Home Appliances', href: '/products#home-appliances' },
+        { label: 'Car Tyres & Accessories', href: '/products#car-tyres' },
+        { label: 'Heavy Vehicle Tyres', href: '/products#heavy-vehicle-tyres' },
     ],
     Services: [
-        { label: 'Logistics Solutions', href: '#services' },
-        { label: 'Customs Clearance', href: '#services' },
-        { label: 'Warehousing', href: '#services' },
-        { label: 'Trade Insurance', href: '#services' },
-        { label: 'Route Optimization', href: '#services' },
+        { label: 'Industrial Cooking Equipment', href: '/products#kitchen-equipment' },
+        { label: 'Workshop Equipment', href: '/products#mechanical-equipment' },
+        { label: 'Refrigerators & Freezers', href: '/products#home-appliances' },
+        { label: 'Automotive Consumables', href: '/products#car-tyres' },
+        { label: 'Construction Machinery Tyres', href: '/products#heavy-vehicle-tyres' },
     ],
     Company: [
-        { label: 'About Us', href: '#trust' },
-        { label: 'Global Presence', href: '#global' },
-        { label: 'Industries', href: '#industries' },
-        { label: 'Certifications', href: '#trust' },
-        { label: 'Contact', href: '#contact' },
+        { label: 'About Us', href: '/about' },
+        { label: 'Products', href: '/products' },
+        { label: 'Vision & Mission', href: '/about#vision-mission' },
+        { label: 'Why Choose Us', href: '/about#why-choose-us' },
+        { label: 'Contact', href: '/contact' },
     ],
 };
 export function Footer() {
@@ -50,23 +50,23 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-ivory/40 leading-relaxed max-w-sm mb-8">
-              A premier international trading company delivering excellence in commodity trading,
-              industrial supply, and logistics solutions across global markets.
+              Excalibur General Trading is a dynamic wholesale supply company supporting commercial,
+              industrial, automotive, and household product requirements across multiple sectors.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-gold/60 flex-shrink-0"/>
-                <span className="text-sm text-ivory/40">Dubai, United Arab Emirates</span>
+                <span className="text-sm text-ivory/40">Musaffah, M14, Abu Dhabi, UAE</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gold/60 flex-shrink-0"/>
-                <span className="text-sm text-ivory/40">trade@excalibur-trading.com</span>
+                <span className="text-sm text-ivory/40">sales@excaliburuae.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gold/60 flex-shrink-0"/>
-                <span className="text-sm text-ivory/40">+971 4 XXX XXXX</span>
+                <span className="text-sm text-ivory/40">+971585930053</span>
               </div>
             </div>
           </div>

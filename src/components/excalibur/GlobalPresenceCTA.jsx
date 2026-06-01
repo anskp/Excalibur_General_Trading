@@ -131,7 +131,7 @@ export function CTASection() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-charcoal">Headquarters</p>
-                        <p className="text-sm text-charcoal/50">Dubai, United Arab Emirates</p>
+                        <p className="text-sm text-charcoal/50">Musaffah, M14, Abu Dhabi, UAE</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -140,7 +140,7 @@ export function CTASection() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-charcoal">Phone</p>
-                        <p className="text-sm text-charcoal/50">+971 4 XXX XXXX</p>
+                        <p className="text-sm text-charcoal/50">+971585930053</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -149,7 +149,7 @@ export function CTASection() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-charcoal">Email</p>
-                        <p className="text-sm text-charcoal/50">trade@excalibur-trading.com</p>
+                        <p className="text-sm text-charcoal/50">sales@excaliburuae.com</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
