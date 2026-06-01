@@ -28,7 +28,7 @@ export const metadata = {
     ],
     authors: [{ name: "Excalibur General Trading" }],
     icons: {
-        icon: "/logo.svg",
+        icon: "/images/excalibur-logo-bgremoved-crop-0.png",
     },
     openGraph: {
         title: "Excalibur General Trading | Global Trade Beyond Borders",
