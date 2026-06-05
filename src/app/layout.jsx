@@ -12,27 +12,26 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 export const metadata = {
-    title: "Excalibur General Trading | Global Trade Beyond Borders",
-    description: "Excalibur General Trading is a premier international trading company specializing in commodity trading, oil & gas, industrial supply, procurement, and logistics solutions across global markets.",
+    title: "Excalibur General Trading | Trading & Supply Solutions",
+    description: "Excalibur General Trading is a dynamic trading company specializing in the wholesale supply of commercial, industrial, automotive, and household products.",
     keywords: [
         "Excalibur",
         "General Trading",
-        "International Trade",
-        "Commodity Trading",
-        "Oil & Gas",
-        "Industrial Supply",
-        "Procurement",
-        "Logistics",
-        "Global Trade",
-        "Import Export",
+        "Restaurant & Kitchen Equipment Trading",
+        "Mechanical Equipment Trading",
+        "Home Appliances Trading",
+        "Cars Tyres & Accessories Trading",
+        "Heavy Vehicles & Equipment Tyres Trading",
+        "Abu Dhabi",
+        "Musaffah",
     ],
     authors: [{ name: "Excalibur General Trading" }],
     icons: {
         icon: "/images/excalibur-logo-bgremoved-crop-0.png",
     },
     openGraph: {
-        title: "Excalibur General Trading | Global Trade Beyond Borders",
-        description: "A premier international trading company specializing in commodity trading, oil & gas, and industrial supply across global markets.",
+        title: "Excalibur General Trading | Trading & Supply Solutions",
+        description: "Wholesale supply solutions for commercial, industrial, automotive, and household product sectors.",
         type: "website",
     },
 };

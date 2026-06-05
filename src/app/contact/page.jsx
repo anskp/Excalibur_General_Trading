@@ -3,7 +3,7 @@
 import { Navbar } from '@/components/excalibur/Navbar';
 import { Footer } from '@/components/excalibur/Footer';
 import { ScrollReveal } from '@/components/excalibur/ScrollReveal';
-import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Globe, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -62,6 +62,17 @@ export default function ContactPage() {
                           <p className="text-sm font-semibold text-charcoal">Email</p>
                           <a href="mailto:sales@excaliburuae.com" className="text-sm text-charcoal/50 hover:text-crimson transition-colors">
                             sales@excaliburuae.com
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-xl bg-crimson/10 flex items-center justify-center flex-shrink-0">
+                          <Globe className="w-4 h-4 text-crimson" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-charcoal">Website</p>
+                          <a href="https://www.excaliburuae.com" className="text-sm text-charcoal/50 hover:text-crimson transition-colors">
+                            www.excaliburuae.com
                           </a>
                         </div>
                       </div>
@@ -125,4 +136,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

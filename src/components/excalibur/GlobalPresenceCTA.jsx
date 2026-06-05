@@ -1,6 +1,6 @@
 'use client';
 import { ScrollReveal } from './ScrollReveal';
-import { ArrowRight, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { ArrowRight, MapPin, Phone, Mail, Globe } from 'lucide-react';
 export function GlobalPresenceSection() {
     return (<section id="global" className="relative py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,11 +154,11 @@ export function CTASection() {
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-crimson/10 flex items-center justify-center flex-shrink-0">
-                        <Clock className="w-4 h-4 text-crimson"/>
+                        <Globe className="w-4 h-4 text-crimson"/>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-charcoal">Business Hours</p>
-                        <p className="text-sm text-charcoal/50">Sun - Thu: 9:00 AM - 6:00 PM (GST)</p>
+                        <p className="text-sm font-semibold text-charcoal">Website</p>
+                        <p className="text-sm text-charcoal/50">www.excaliburuae.com</p>
                       </div>
                     </div>
                   </div>
@@ -192,13 +192,12 @@ export function CTASection() {
                         Interest Area
                       </label>
                       <select className="w-full px-4 py-3 rounded-xl bg-ivory/80 border border-border text-sm text-charcoal/70 focus:outline-none focus:border-gold/40 focus:ring-2 focus:ring-gold/10 transition-all appearance-none">
-                        <option>Select a service</option>
-                        <option>Import & Export</option>
-                        <option>Commodity Trading</option>
-                        <option>Oil & Gas</option>
-                        <option>Industrial Supply</option>
-                        <option>Logistics Solutions</option>
-                        <option>Partnership Inquiry</option>
+                        <option>Select a category</option>
+                        <option>Restaurant & Kitchen Equipment Trading</option>
+                        <option>Mechanical Equipment Trading</option>
+                        <option>Home Appliances Trading</option>
+                        <option>Cars Tyres & Accessories Trading</option>
+                        <option>Heavy Vehicles & Equipment Tyres Trading</option>
                       </select>
                     </div>
                     <div>
