@@ -98,7 +98,7 @@ export default function ProductsPage() {
                     <div className="space-y-3">
                       {category.items.map((item) => (
                         <div key={item} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-crimson mt-2.5 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 flex-shrink-0" />
                           <p className="text-sm text-charcoal/65 leading-relaxed">{item}</p>
                         </div>
                       ))}

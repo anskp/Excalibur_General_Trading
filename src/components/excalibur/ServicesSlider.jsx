@@ -3,33 +3,28 @@ import { useRef } from 'react';
 import { Ship, Truck, Plane, Train, Warehouse, FileCheck, ShieldCheck, BarChart3, Container, MapPin, Layers, Clock, } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 const services = [
-    { icon: Ship, label: 'Maritime Freight', category: 'Shipping', color: 'crimson' },
+    { icon: Ship, label: 'Maritime Freight', category: 'Shipping', color: 'gold' },
     { icon: Plane, label: 'Air Cargo', category: 'Logistics', color: 'gold' },
     { icon: Truck, label: 'Road Transport', category: 'Distribution', color: 'olive' },
     { icon: Train, label: 'Rail Freight', category: 'Logistics', color: 'gold' },
-    { icon: Container, label: 'Container Trading', category: 'Maritime', color: 'crimson' },
+    { icon: Container, label: 'Container Trading', category: 'Maritime', color: 'gold' },
     { icon: Warehouse, label: 'Warehousing', category: 'Storage', color: 'olive' },
     { icon: FileCheck, label: 'Customs Clearance', category: 'Compliance', color: 'gold' },
-    { icon: ShieldCheck, label: 'Trade Insurance', category: 'Protection', color: 'crimson' },
+    { icon: ShieldCheck, label: 'Trade Insurance', category: 'Protection', color: 'gold' },
     { icon: BarChart3, label: 'Market Intelligence', category: 'Analytics', color: 'olive' },
     { icon: MapPin, label: 'Route Optimization', category: 'Logistics', color: 'gold' },
-    { icon: Layers, label: 'Supply Chain', category: 'Management', color: 'crimson' },
+    { icon: Layers, label: 'Supply Chain', category: 'Management', color: 'gold' },
     { icon: Clock, label: 'Express Delivery', category: 'Logistics', color: 'olive' },
 ];
 const colorStyles = {
-    crimson: {
-        icon: 'bg-crimson/10 text-crimson',
-        badge: 'bg-crimson/8 text-crimson/80',
-        border: 'border-crimson/15',
+    gold: {
+        icon: 'bg-gold/10 text-gold',
+        badge: 'bg-gold/8 text-gold/80',
+        border: 'border-gold/15',
     },
     olive: {
-        icon: 'bg-olive/10 text-olive',
-        badge: 'bg-olive/8 text-olive/80',
-        border: 'border-olive/15',
-    },
-    gold: {
-        icon: 'bg-gold/10 text-gold-dark',
-        badge: 'bg-gold/8 text-gold-dark/80',
+        icon: 'bg-gold-light/10 text-gold-dark',
+        badge: 'bg-gold-light/20 text-gold-dark',
         border: 'border-gold/15',
     },
 };
@@ -88,7 +83,7 @@ export function ServicesSlider() {
             const styles = colorStyles[service.color];
             const Icon = service.icon;
             return (<div key={service.label} className="group flex-shrink-0 w-[280px] sm:w-[300px]">
-                <div className={`h-full rounded-3xl glass-card hover:glass-card-hover border ${styles.border} p-6 transition-all duration-500 hover:-translate-y-1 cursor-pointer`}>
+                <div className={`h-full rounded-3xl glass-card hover:glass-card-hover border ${styles.border} p-6 transition-all duration-500 hover:-translate-y-2 hover:border-gold cursor-pointer`}>
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-12 h-12 rounded-2xl ${styles.icon} flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
                       <Icon className="w-5 h-5"/>

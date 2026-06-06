@@ -81,7 +81,7 @@ export function BentoGrid() {
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
-            <div className="w-1.5 h-1.5 rounded-full bg-crimson"/>
+            <div className="w-1.5 h-1.5 rounded-full bg-gold"/>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/60">
               Business Solutions
             </span>
@@ -136,7 +136,7 @@ export function BentoGrid() {
                         <div className="flex items-center gap-4">
                           <div className="flex -space-x-2">
                             {[
-                        'bg-crimson',
+                        'bg-gold',
                         'bg-olive',
                         'bg-gold',
                         'bg-charcoal-light',

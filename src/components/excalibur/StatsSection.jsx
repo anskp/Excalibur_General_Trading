@@ -1,6 +1,7 @@
 'use client';
 import { ScrollReveal, CounterAnimation } from './ScrollReveal';
-import { MapPin, Ship, TrendingUp, Users } from 'lucide-react';
+import { BarChart3, CheckCircle2, Clock, Map, MapPin, Ship, TrendingUp, Users } from 'lucide-react';
+
 const stats = [
     {
         icon: MapPin,
@@ -8,7 +9,7 @@ const stats = [
         suffix: '+',
         label: 'Countries Served',
         description: 'Active operations across six continents',
-        color: 'crimson',
+        color: 'gold',
     },
     {
         icon: Users,
@@ -32,24 +33,26 @@ const stats = [
         suffix: '+',
         label: 'Years of Experience',
         description: 'Building the future of global trade',
-        color: 'crimson',
+        color: 'gold',
     },
 ];
+
 const secondaryStats = [
-    { value: 48, suffix: 'h', label: 'Procurement Speed', icon: '⚡' },
-    { value: 2, suffix: 'B+', prefix: '$', label: 'Trade Volume', icon: '📊' },
-    { value: 99, suffix: '.7%', label: 'Delivery Rate', icon: '✓' },
-    { value: 186, suffix: '+', label: 'Active Routes', icon: '🗺' },
+    { value: 48, suffix: 'h', label: 'Procurement Speed', icon: Clock },
+    { value: 2, suffix: 'B+', prefix: '$', label: 'Trade Volume', icon: BarChart3 },
+    { value: 99, suffix: '.7%', label: 'Delivery Rate', icon: CheckCircle2 },
+    { value: 186, suffix: '+', label: 'Active Routes', icon: Map },
 ];
+
 const colorConfig = {
-    crimson: { icon: 'bg-crimson/10 text-crimson', glow: 'shadow-crimson/8' },
-    gold: { icon: 'bg-gold/10 text-gold-dark', glow: 'shadow-gold/8' },
-    olive: { icon: 'bg-olive/10 text-olive', glow: 'shadow-olive/8' },
+    gold: { icon: 'bg-gold/10 text-gold', glow: 'shadow-gold/8' },
+    olive: { icon: 'bg-gold-light/10 text-gold-dark', glow: 'shadow-gold/8' },
 };
+
 export function StatsSection() {
     return (<section className="relative py-24 lg:py-32">
       {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory-dark/30 to-ivory"/>
+      <div className="absolute inset-0 bg-white"/>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16 lg:mb-20">
@@ -79,7 +82,7 @@ export function StatsSection() {
                     <Icon className="w-6 h-6"/>
                   </div>
                   <div className="mb-2">
-                    <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={''} className="text-3xl lg:text-4xl font-bold text-charcoal font-display"/>
+                    <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={''} className="text-3xl lg:text-4xl font-bold text-gold font-display"/>
                   </div>
                   <h3 className="text-sm font-semibold text-charcoal mb-1">
                     {stat.label}
@@ -94,13 +97,18 @@ export function StatsSection() {
 
         {/* Secondary Stats - horizontal bar */}
         <ScrollReveal delay={0.3}>
-          <div className="glass rounded-3xl p-6 lg:p-8 border border-gold/10">
+          <div className="bg-white rounded-3xl p-6 lg:p-8 border border-[#E5E5E5]">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {secondaryStats.map((stat) => (<div key={stat.label} className="text-center">
-                  <span className="text-xl mb-2 block">{stat.icon}</span>
-                  <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={'prefix' in stat ? stat.prefix || '' : ''} className="text-2xl font-bold text-charcoal font-display"/>
+              {secondaryStats.map((stat) => {
+                const Icon = stat.icon;
+                return (<div key={stat.label} className="text-center">
+                  <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                    <Icon className="h-4 w-4" />
+                  </div>
+                  <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={'prefix' in stat ? stat.prefix || '' : ''} className="text-2xl font-bold text-gold font-display"/>
                   <p className="text-xs text-charcoal/40 mt-1 font-medium">{stat.label}</p>
-                </div>))}
+                </div>);
+              })}
             </div>
           </div>
         </ScrollReveal>

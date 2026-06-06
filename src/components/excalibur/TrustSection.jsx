@@ -7,7 +7,7 @@ const certifications = [
         title: 'ISO 9001:2015',
         description: 'Quality Management System',
         detail: 'Internationally recognized QMS standard ensuring consistent service delivery.',
-        color: 'crimson',
+        color: 'gold',
     },
     {
         icon: Award,
@@ -28,7 +28,7 @@ const certifications = [
         title: 'ISO 27001',
         description: 'Information Security',
         detail: 'Enterprise-grade data protection for trade documentation and communications.',
-        color: 'crimson',
+        color: 'gold',
     },
 ];
 const trustIndicators = [
@@ -40,20 +40,15 @@ const trustIndicators = [
     { icon: Lock, label: 'Insured Operations', detail: 'Comprehensive Coverage' },
 ];
 const colorMap = {
-    crimson: {
-        icon: 'bg-crimson/10 text-crimson',
-        border: 'border-crimson/15',
-        badge: 'bg-crimson/8 text-crimson',
+    gold: {
+        icon: 'bg-gold/10 text-gold',
+        border: 'border-gold/15',
+        badge: 'bg-gold/8 text-gold',
     },
     olive: {
-        icon: 'bg-olive/10 text-olive',
-        border: 'border-olive/15',
-        badge: 'bg-olive/8 text-olive',
-    },
-    gold: {
-        icon: 'bg-gold/10 text-gold-dark',
+        icon: 'bg-gold-light/10 text-gold-dark',
         border: 'border-gold/15',
-        badge: 'bg-gold/8 text-gold-dark',
+        badge: 'bg-gold-light/20 text-gold-dark',
     },
 };
 export function TrustSection() {
@@ -65,7 +60,7 @@ export function TrustSection() {
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
-            <div className="w-1.5 h-1.5 rounded-full bg-crimson"/>
+            <div className="w-1.5 h-1.5 rounded-full bg-gold"/>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/60">
               Trust & Certifications
             </span>
