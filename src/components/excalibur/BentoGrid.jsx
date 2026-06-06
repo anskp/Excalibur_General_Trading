@@ -127,7 +127,7 @@ export function BentoGrid() {
                     </h3>
 
                     {/* Description */}
-                    <p className={`text-ivory/60 leading-relaxed ${isLarge ? 'text-sm lg:text-base max-w-md' : 'text-sm'}`}>
+                    <p className={`text-ivory/60 leading-[1.8] ${isLarge ? 'text-sm lg:text-base max-w-md' : 'text-sm'}`}>
                       {solution.description}
                     </p>
 

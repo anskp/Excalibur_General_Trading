@@ -31,7 +31,7 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (<Link key={link.href} href={link.href} className="px-4 py-2 text-sm font-medium text-white/85 hover:text-gold-light transition-colors duration-300 rounded-full hover:bg-white/5">
+            {navLinks.map((link) => (<Link key={link.href} href={link.href} className="px-4 py-2 text-sm font-semibold tracking-[0.5px] text-white/85 hover:text-gold-light transition-colors duration-300 rounded-full hover:bg-white/5">
                 {link.label}
               </Link>))}
           </div>
@@ -54,7 +54,7 @@ export function Navbar() {
         {mobileOpen && (<motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} className="fixed inset-0 z-40 bg-ivory/95 backdrop-blur-xl pt-24 px-6">
             <div className="flex flex-col gap-2 max-w-md mx-auto">
               {navLinks.map((link, i) => (<motion.div key={link.href} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.06 }}>
-                  <Link href={link.href} onClick={() => setMobileOpen(false)} className="flex items-center justify-between px-5 py-4 text-lg font-medium text-charcoal hover:text-gold hover:bg-gold/5 rounded-2xl transition-all duration-300">
+                  <Link href={link.href} onClick={() => setMobileOpen(false)} className="flex items-center justify-between px-5 py-4 text-lg font-semibold tracking-[0.5px] text-charcoal hover:text-gold hover:bg-gold/5 rounded-2xl transition-all duration-300">
                     {link.label}
                     <ChevronRight className="w-4 h-4 text-muted-foreground"/>
                   </Link>

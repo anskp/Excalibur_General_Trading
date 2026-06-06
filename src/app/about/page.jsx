@@ -39,7 +39,7 @@ export default function AboutPage() {
                 Your Trusted Partner in
                 <span className="text-gradient-gold"> Trading & Supply Solutions</span>
               </h1>
-              <p className="mt-6 text-base lg:text-lg text-charcoal/55 max-w-3xl mx-auto leading-relaxed">
+              <p className="mt-6 text-base lg:text-lg text-charcoal/55 max-w-3xl mx-auto leading-[1.8]">
                 Excalibur General Trading is a dynamic trading company specializing in the wholesale supply
                 of commercial, industrial, automotive, and household products. We deliver high-quality equipment,
                 reliable products, and professional trading solutions across multiple sectors.
@@ -50,7 +50,7 @@ export default function AboutPage() {
               <ScrollReveal direction="left">
                 <div className="glass-card rounded-3xl p-8 lg:p-10 h-full border border-gold/15">
                   <h2 className="text-2xl lg:text-3xl font-bold text-charcoal mb-4">Our Vision</h2>
-                  <p className="text-charcoal/60 leading-relaxed">
+                  <p className="text-charcoal/60 leading-[1.8]">
                     To become a trusted regional leader in trading and distribution by providing reliable products,
                     innovative solutions, and exceptional customer service across diversified industries.
                   </p>

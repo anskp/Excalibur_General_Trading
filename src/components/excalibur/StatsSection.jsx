@@ -82,7 +82,7 @@ export function StatsSection() {
                     <Icon className="w-6 h-6"/>
                   </div>
                   <div className="mb-2">
-                    <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={''} className="text-3xl lg:text-4xl font-bold text-gold font-display"/>
+                    <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={''} className="text-3xl lg:text-4xl font-extrabold text-gold font-display"/>
                   </div>
                   <h3 className="text-sm font-semibold text-charcoal mb-1">
                     {stat.label}
@@ -105,7 +105,7 @@ export function StatsSection() {
                   <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gold/10 text-gold">
                     <Icon className="h-4 w-4" />
                   </div>
-                  <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={'prefix' in stat ? stat.prefix || '' : ''} className="text-2xl font-bold text-gold font-display"/>
+                  <CounterAnimation value={stat.value} suffix={stat.suffix} prefix={'prefix' in stat ? stat.prefix || '' : ''} className="text-2xl font-extrabold text-gold font-display"/>
                   <p className="text-xs text-charcoal/40 mt-1 font-medium">{stat.label}</p>
                 </div>);
               })}

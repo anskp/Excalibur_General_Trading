@@ -79,7 +79,7 @@ export default function ProductsPage() {
                 Wholesale Trading
                 <span className="text-gradient-gold"> Product Portfolio</span>
               </h1>
-              <p className="mt-6 text-base lg:text-lg text-charcoal/55 max-w-3xl mx-auto leading-relaxed">
+              <p className="mt-6 text-base lg:text-lg text-charcoal/55 max-w-3xl mx-auto leading-[1.8]">
                 Excalibur General Trading supplies high-quality products across commercial, industrial,
                 automotive, and household sectors.
               </p>
@@ -99,7 +99,7 @@ export default function ProductsPage() {
                       {category.items.map((item) => (
                         <div key={item} className="flex items-start gap-3">
                           <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 flex-shrink-0" />
-                          <p className="text-sm text-charcoal/65 leading-relaxed">{item}</p>
+                          <p className="text-sm text-charcoal/65 leading-[1.8]">{item}</p>
                         </div>
                       ))}
                     </div>

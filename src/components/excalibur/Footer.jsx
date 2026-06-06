@@ -52,7 +52,7 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-white/70 leading-relaxed max-w-sm mb-8">
+            <p className="text-sm text-white/70 leading-[1.8] max-w-sm mb-8">
               Excalibur General Trading is a dynamic wholesale supply company supporting commercial,
               industrial, automotive, and household product requirements across multiple sectors.
             </p>

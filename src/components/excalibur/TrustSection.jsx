@@ -89,7 +89,7 @@ export function TrustSection() {
                   <p className={`text-xs font-semibold uppercase tracking-wider ${styles.badge} inline-block px-3 py-1 rounded-full mb-3`}>
                     {cert.description}
                   </p>
-                  <p className="text-xs text-charcoal/40 leading-relaxed">{cert.detail}</p>
+                  <p className="text-xs text-charcoal/40 leading-[1.8]">{cert.detail}</p>
                 </div>
               </ScrollReveal>);
         })}

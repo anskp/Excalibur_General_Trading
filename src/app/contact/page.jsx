@@ -23,7 +23,7 @@ export default function ContactPage() {
                 Connect with
                 <span className="text-gold"> Excalibur Trading</span>
               </h1>
-              <p className="mt-6 text-base lg:text-lg text-white/65 max-w-3xl mx-auto leading-relaxed">
+              <p className="mt-6 text-base lg:text-lg text-white/65 max-w-3xl mx-auto leading-[1.8]">
                 Reach our team for wholesale product inquiries, pricing discussions, and long-term supply partnerships.
               </p>
             </ScrollReveal>

@@ -1,15 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const inter = Inter({
+    variable: "--font-inter",
     subsets: ["latin"],
+    weight: ["400", "500", "600"],
 });
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const manrope = Manrope({
+    variable: "--font-manrope",
     subsets: ["latin"],
+    weight: ["500", "600", "700", "800"],
 });
 export const metadata = {
     title: "Excalibur General Trading | Trading & Supply Solutions",
@@ -37,7 +39,7 @@ export const metadata = {
 };
 export default function RootLayout({ children, }) {
     return (<html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-ivory text-charcoal`}>
+      <body className={`${inter.variable} ${manrope.variable} antialiased bg-ivory text-charcoal`}>
         {children}
         <Toaster />
         <Analytics />

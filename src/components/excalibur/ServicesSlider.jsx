@@ -95,7 +95,7 @@ export function ServicesSlider() {
                   <h3 className="text-base font-semibold text-charcoal mb-2 group-hover:text-charcoal/80 transition-colors">
                     {service.label}
                   </h3>
-                  <p className="text-sm text-charcoal/40 leading-relaxed">
+                  <p className="text-sm text-charcoal/40 leading-[1.8]">
                     Professional {service.label.toLowerCase()} solutions for global trade operations.
                   </p>
 

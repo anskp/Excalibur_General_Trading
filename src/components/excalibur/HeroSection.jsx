@@ -24,13 +24,13 @@ export function HeroSection() {
               </span>
             </motion.div> */}
 
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08]">
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08]">
               <span className="text-white">Global Trade</span>
               <br />
               <span className="text-gold">Beyond Borders</span>
             </motion.h1>
 
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.45 }} className="mt-6 text-base sm:text-lg text-white/75 leading-relaxed max-w-xl">
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.45 }} className="mt-6 text-base sm:text-lg text-white/75 leading-[1.8] max-w-xl">
               Excalibur General Trading powers international commerce with premium commodity trading, 
               industrial supply chains, and end-to-end logistics solutions across 40+ countries.
             </motion.p>
