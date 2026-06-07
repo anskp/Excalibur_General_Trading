@@ -64,10 +64,10 @@ export function HeroSection() {
       <div
         className="absolute top-0 bottom-0 z-[6]"
         style={{
-          left: 'calc(42% - 1px)',
+          left: 'calc(44% - 1px)',
           width: '2px',
           background: '#C9A84C',
-          transform: 'skewX(-8deg)',
+          transform: 'skewX(-6deg)',
           transformOrigin: 'top left',
           opacity: 0.55,
         }}
