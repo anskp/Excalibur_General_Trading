@@ -6,7 +6,7 @@ const solutions = [
         title: 'Import & Export',
         description: 'Seamless cross-border trade facilitation with comprehensive customs management and documentation.',
         image: '/images/solutions/import-export.png',
-        span: 'lg:col-span-2 lg:row-span-2',
+        span: 'sm:col-span-2 lg:col-span-4 lg:row-span-2',
         size: 'large',
         overlay: 'from-charcoal/80 via-charcoal/50 to-transparent',
         textPosition: 'bottom',
@@ -15,7 +15,7 @@ const solutions = [
         title: 'Oil & Gas',
         description: 'Premium petroleum products and energy commodities.',
         image: '/images/solutions/oil-gas.png',
-        span: 'lg:col-span-1',
+        span: 'lg:col-span-2',
         size: 'small',
         overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
         textPosition: 'bottom',
@@ -24,7 +24,7 @@ const solutions = [
         title: 'Industrial Supply',
         description: 'Heavy machinery and industrial equipment procurement.',
         image: '/images/solutions/industrial-supply.png',
-        span: 'lg:col-span-1',
+        span: 'lg:col-span-2',
         size: 'small',
         overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
         textPosition: 'bottom',
@@ -33,7 +33,7 @@ const solutions = [
         title: 'Commodity Trading',
         description: 'Strategic commodity sourcing and market intelligence.',
         image: '/images/solutions/commodity-trading.png',
-        span: 'lg:col-span-1',
+        span: 'lg:col-span-2',
         size: 'small',
         overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
         textPosition: 'bottom',
@@ -43,7 +43,7 @@ const solutions = [
         description: 'End-to-end supply chain management and freight solutions.',
         image: '/images/solutions/logistics.png',
         span: 'lg:col-span-2',
-        size: 'wide',
+        size: 'small',
         overlay: 'from-charcoal/80 via-charcoal/40 to-transparent',
         textPosition: 'bottom',
     },
@@ -51,8 +51,8 @@ const solutions = [
         title: 'Infrastructure Materials',
         description: 'Construction materials and structural components.',
         image: '/images/solutions/infrastructure.png',
-        span: 'lg:col-span-1',
-        size: 'small',
+        span: 'lg:col-span-2 lg:row-span-2',
+        size: 'tall',
         overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
         textPosition: 'bottom',
     },
@@ -60,8 +60,8 @@ const solutions = [
         title: 'Procurement',
         description: 'Strategic sourcing and vendor management.',
         image: '/images/solutions/procurement.png',
-        span: 'lg:col-span-1',
-        size: 'small',
+        span: 'lg:col-span-2 lg:row-span-2',
+        size: 'tall',
         overlay: 'from-charcoal/75 via-charcoal/40 to-transparent',
         textPosition: 'bottom',
     },
@@ -69,7 +69,7 @@ const solutions = [
         title: 'Global Partnerships',
         description: 'Building lasting alliances across international markets.',
         image: '/images/solutions/partnerships.png',
-        span: 'lg:col-span-2',
+        span: 'sm:col-span-2 lg:col-span-4 lg:row-span-2',
         size: 'wide',
         overlay: 'from-charcoal/80 via-charcoal/40 to-transparent',
         textPosition: 'bottom',
@@ -97,14 +97,15 @@ export function BentoGrid() {
         </ScrollReveal>
 
         {/* Bento Grid */}
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 lg:auto-rows-[170px] gap-4 lg:gap-5">
           {solutions.map((solution) => {
             const isLarge = solution.size === 'large';
             const isWide = solution.size === 'wide';
+            const isTall = solution.size === 'tall';
             return (<StaggerItem key={solution.title} className={solution.span}>
                 <div className={`group relative h-full rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-gold/20 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1`}>
                   {/* Background Image */}
-                  <div className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 ${isLarge ? 'min-h-[400px] lg:min-h-[480px]' : isWide ? 'min-h-[240px] lg:min-h-[280px]' : 'min-h-[260px] lg:min-h-[300px]'}`} style={{ backgroundImage: `url('${solution.image}')` }}/>
+                  <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: `url('${solution.image}')` }}/>
 
                   {/* Gradient Overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-t ${solution.overlay}`}/>
@@ -113,21 +114,21 @@ export function BentoGrid() {
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"/>
 
                   {/* Content */}
-                  <div className={`relative z-10 flex flex-col justify-end h-full p-6 lg:p-8 ${isLarge ? 'min-h-[400px] lg:min-h-[480px]' : isWide ? 'min-h-[240px] lg:min-h-[280px]' : 'min-h-[260px] lg:min-h-[300px]'}`}>
+                  <div className={`relative z-10 flex h-full min-h-[280px] flex-col justify-end p-6 lg:min-h-0 ${isLarge || isWide ? 'lg:p-8' : 'lg:p-6'}`}>
                     {/* Category badge */}
                     <div className="mb-3">
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-[10px] font-semibold uppercase tracking-[0.15em] text-ivory/80">
-                        {isLarge ? 'Core Business' : isWide ? 'Enterprise' : 'Solution'}
+                        {isLarge ? 'Core Business' : isWide ? 'Global Network' : isTall ? 'Specialist' : 'Solution'}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className={`font-bold text-white mb-2 ${isLarge ? 'text-2xl lg:text-3xl' : 'text-lg lg:text-xl'}`}>
+                    <h3 className={`font-bold text-white mb-2 ${isLarge || isWide ? 'text-2xl lg:text-3xl' : 'text-lg lg:text-xl'}`}>
                       {solution.title}
                     </h3>
 
                     {/* Description */}
-                    <p className={`text-ivory/60 leading-[1.8] ${isLarge ? 'text-sm lg:text-base max-w-md' : 'text-sm'}`}>
+                    <p className={`text-ivory/60 leading-[1.8] ${isLarge || isWide ? 'text-sm lg:text-base max-w-md' : 'text-sm'}`}>
                       {solution.description}
                     </p>
 
