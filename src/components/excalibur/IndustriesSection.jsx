@@ -71,12 +71,12 @@ export function IndustriesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
             <div className="w-1.5 h-1.5 rounded-full bg-gold"/>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
               Industries We Serve
             </span>
-          </div>
+          </div> */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
             Powering Global
             <span className="text-gold-light"> Industries</span>

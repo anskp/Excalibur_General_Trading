@@ -13,12 +13,12 @@ export default function ContactPage() {
         <section className="relative py-24 lg:py-28 bg-charcoal">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
+              {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold" />
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
                   Contact
                 </span>
-              </div>
+              </div> */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                 Connect with
                 <span className="text-gold"> Excalibur Trading</span>

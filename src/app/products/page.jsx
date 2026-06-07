@@ -69,12 +69,12 @@ export default function ProductsPage() {
         <section className="relative py-24 lg:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
+              {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-olive" />
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/60">
                   Products
                 </span>
-              </div>
+              </div> */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-charcoal">
                 Wholesale Trading
                 <span className="text-gradient-gold"> Product Portfolio</span>

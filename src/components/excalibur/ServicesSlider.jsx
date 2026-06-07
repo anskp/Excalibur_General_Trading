@@ -47,12 +47,12 @@ export function ServicesSlider() {
         {/* Section Header */}
         <div className="flex items-end justify-between mb-12">
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-olive"/>
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/60">
                 Services & Capabilities
               </span>
-            </div>
+            </div> */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-charcoal">
               Enterprise
               <span className="text-gradient-gold"> Services</span>

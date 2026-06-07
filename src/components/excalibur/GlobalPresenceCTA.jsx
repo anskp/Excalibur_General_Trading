@@ -6,12 +6,12 @@ export function GlobalPresenceSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
             <div className="w-1.5 h-1.5 rounded-full bg-olive"/>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
               Global Presence
             </span>
-          </div>
+          </div> */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
             Trading Across
             <span className="text-gold-light"> Continents</span>
@@ -99,12 +99,12 @@ export function CTASection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-gold"/>
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
                 Start Trading
               </span>
-            </div>
+            </div> */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Build the Future of
               <span className="text-gold"> Global Trade</span>

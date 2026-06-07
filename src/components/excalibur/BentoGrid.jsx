@@ -80,12 +80,12 @@ export function BentoGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/20 mb-6">
             <div className="w-1.5 h-1.5 rounded-full bg-gold"/>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/60">
               Business Solutions
             </span>
-          </div>
+          </div> */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-charcoal">
             Comprehensive Trade
             <span className="text-gradient-gold"> Ecosystem</span>
