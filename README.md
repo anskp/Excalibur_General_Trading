@@ -2,19 +2,40 @@
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
-# Run and deploy your AI Studio app
+# Excalibur General Trading
 
-This contains everything you need to run your app locally.
+Modern corporate website for Excalibur General Trading LLC, Abu Dhabi, UAE.
 
-View your app in AI Studio: https://ai.studio/apps/a0ec765c-bb69-4425-a04a-8cba95d254e5
+**Live View:** [https://excaliburuae.com/](https://excaliburuae.com/)
+
+## Tech Stack
+
+- **Framework:** React 19 + Vite
+- **Styling:** Tailwind CSS 4
+- **Animations:** Motion (Framer Motion)
+- **Icons:** Lucide React
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the app:
    `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Run the dev server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Deploy to Vercel
+
+This project is configured with `vercel.json` to use Vite as the build framework.
