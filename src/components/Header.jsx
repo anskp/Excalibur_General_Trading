@@ -35,9 +35,9 @@ export default function Header({ activePage, onChangePage }) {
             id="logo-header-trigger"
           >
             <img 
-              src="/images/logo.png" 
+              src="/images/logo-1.png" 
               alt="Excalibur General Trading" 
-              className="h-22 mt-2 object-contain"
+              className="h-12 mt-2 object-contain"
             />
           </div>
 
