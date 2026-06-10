@@ -105,7 +105,7 @@ export default function WhyView() {
       </section>
 
       {/* Testimonials section with realistic corporate testimonials */}
-      <section className="bg-[#EFEFEF] py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200" id="testimonials">
+      {/* <section className="bg-[#EFEFEF] py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200" id="testimonials">
         <div className="max-w-7xl mx-auto space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -125,7 +125,7 @@ export default function WhyView() {
                 className="bg-white border-t-2 border-t-[#0EA5E9] p-8 flex flex-col justify-between shadow-xs relative"
                 id={`testimonial-card-${idx}`}
               >
-                {/* Decorative Quote watermark */}
+               
                 <div className="absolute top-4 right-6 text-7xl font-serif text-gray-100 pointer-events-none select-none">
                   “
                 </div>
@@ -158,7 +158,7 @@ export default function WhyView() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
     </div>
   );

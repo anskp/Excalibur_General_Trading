@@ -153,7 +153,7 @@ export default function ContactView() {
               <div className="space-y-3 font-sans text-xs">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Monday – Saturday</span>
-                  <span className="font-mono font-bold text-white">9:00 AM – 6:00 PM</span>
+                  <span className="font-mono font-bold text-white">8:00 AM – 6:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center text-gray-500">
                   <span>Sunday</span>

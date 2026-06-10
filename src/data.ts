@@ -155,10 +155,10 @@ export const WHY_PREVIEW_ITEMS: WhyPreviewItem[] = [
 ];
 
 export const TIMELINE_EVENTS: TimelineEvent[] = [
-  { year: "2018", title: "Establishment in Abu Dhabi", description: "Founded to bridge the high gap in high-grade industrial catering and workshop components trading." },
-  { year: "2020", title: "Automotive Sector Expansion", description: "Launched our premium Tyre & Automotive accessories distribution network to service regional logistics fleets." },
-  { year: "2022", title: "Integrated Logistics Logistics Hub", description: "Inaugurated our smart warehousing and supply chain facilities in Musaffah (M14) designed for scale." },
-  { year: "2024", title: "Multinational GCC Partnerships", description: "Signed strategic exclusive supply contracts with top-tier industrial manufacturers across the GCC region." },
+  { year: "2022", title: "Establishment in Abu Dhabi", description: "Founded to bridge the high gap in high-grade industrial catering and workshop components trading." },
+  { year: "2023", title: "Automotive Sector Expansion", description: "Launched our premium Tyre & Automotive accessories distribution network to service regional logistics fleets." },
+  { year: "2024", title: "Integrated Logistics Logistics Hub", description: "Inaugurated our smart warehousing and supply chain facilities in Musaffah (M14) designed for scale." },
+  { year: "2025", title: "Multinational GCC Partnerships", description: "Signed strategic exclusive supply contracts with top-tier industrial manufacturers across the GCC region." },
   { year: "2026", title: "Digital Supply Modernization", description: "Upgraded our wholesale distribution structures to utilize smart tracking and 24/7 client portal responses." }
 ];
 
