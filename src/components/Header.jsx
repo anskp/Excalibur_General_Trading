@@ -37,7 +37,7 @@ export default function Header({ activePage, onChangePage }) {
             <img 
               src="/images/logo.png" 
               alt="Excalibur General Trading" 
-              className="h-16 object-contain"
+              className="h-22 mt-2 object-contain"
             />
           </div>
 
