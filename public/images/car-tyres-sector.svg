@@ -1,0 +1,73 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="0.48" stop-color="#1D2636"/>
+      <stop offset="1" stop-color="#2F394D"/>
+    </linearGradient>
+    <radialGradient id="wheelGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(410 298) rotate(90) scale(235)">
+      <stop stop-color="#0EA5E9" stop-opacity="0.34"/>
+      <stop offset="0.58" stop-color="#0EA5E9" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="280" y1="180" x2="520" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="0.32" stop-color="#CBD5E1"/>
+      <stop offset="0.68" stop-color="#64748B"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="222" y1="122" x2="577" y2="478" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4A017"/>
+      <stop offset="1" stop-color="#8A6A0A"/>
+    </linearGradient>
+    <filter id="softShadow" x="103" y="43" width="594" height="514" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="22"/>
+      <feGaussianBlur stdDeviation="28"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.38 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 436C135 352 240 338 377 398C513 457 642 455 800 366V600H0V436Z" fill="#0B1220" fill-opacity="0.46"/>
+  <path d="M0 130H800" stroke="#0EA5E9" stroke-opacity="0.08"/>
+  <path d="M0 470H800" stroke="#0EA5E9" stroke-opacity="0.12"/>
+  <circle cx="400" cy="300" r="260" fill="url(#wheelGlow)"/>
+  <g filter="url(#softShadow)">
+    <circle cx="400" cy="278" r="205" fill="#05070C"/>
+    <circle cx="400" cy="278" r="181" stroke="#222C3F" stroke-width="25"/>
+    <circle cx="400" cy="278" r="152" stroke="#05070C" stroke-width="18"/>
+    <circle cx="400" cy="278" r="124" fill="#111827" stroke="url(#metal)" stroke-width="16"/>
+    <g opacity="0.92">
+      <path d="M400 154L430 241L400 278L370 241L400 154Z" fill="url(#metal)"/>
+      <path d="M400 402L370 315L400 278L430 315L400 402Z" fill="url(#metal)"/>
+      <path d="M276 278L363 248L400 278L363 308L276 278Z" fill="url(#metal)"/>
+      <path d="M524 278L437 308L400 278L437 248L524 278Z" fill="url(#metal)"/>
+      <path d="M312 190L395 231L400 278L353 273L312 190Z" fill="url(#metal)"/>
+      <path d="M488 366L405 325L400 278L447 283L488 366Z" fill="url(#metal)"/>
+      <path d="M488 190L447 273L400 278L405 231L488 190Z" fill="url(#metal)"/>
+      <path d="M312 366L353 283L400 278L395 325L312 366Z" fill="url(#metal)"/>
+    </g>
+    <circle cx="400" cy="278" r="48" fill="#0B1220" stroke="url(#gold)" stroke-width="10"/>
+    <circle cx="400" cy="278" r="16" fill="#CBD5E1"/>
+    <g fill="#94A3B8">
+      <circle cx="400" cy="230" r="6"/>
+      <circle cx="446" cy="264" r="6"/>
+      <circle cx="428" cy="319" r="6"/>
+      <circle cx="372" cy="319" r="6"/>
+      <circle cx="354" cy="264" r="6"/>
+    </g>
+  </g>
+  <g opacity="0.46">
+    <path d="M194 126L149 171" stroke="#0EA5E9" stroke-width="2"/>
+    <path d="M606 126L651 171" stroke="#0EA5E9" stroke-width="2"/>
+    <path d="M194 430L149 385" stroke="#0EA5E9" stroke-width="2"/>
+    <path d="M606 430L651 385" stroke="#0EA5E9" stroke-width="2"/>
+  </g>
+  <rect x="52" y="497" width="208" height="46" fill="#1D2636" fill-opacity="0.86" stroke="#0EA5E9" stroke-opacity="0.35"/>
+  <text x="74" y="516" fill="#0EA5E9" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2">AUTOMOTIVE DIVISION</text>
+  <text x="74" y="535" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Tyres &amp; Accessories Trading</text>
+</svg>
