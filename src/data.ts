@@ -17,7 +17,7 @@ export const IMAGES = {
   kitchenSector: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80", // Stainless steel commercial kitchen
   mechanicalSector: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80", // Industrial mechanical workshop
   appliancesSector: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80", // Premium laundry washing/appliances
-  carTyresSector: "public/images/automotive-tires.png", // Premium automotive wheel / tyre details
+  carTyresSector: "images/automotive-tires.png", // Premium automotive wheel / tyre details
   heavyTyresSector: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=800&q=80", // High-end container crane / heavy tyre / industrial truck
   logisticsMap: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80", // Deep navy blue cargo container ship routing / map vibe
   uaeBusiness: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1000&q=80", // Abu Dhabi business tower
