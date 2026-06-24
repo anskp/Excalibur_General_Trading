@@ -21,6 +21,9 @@ export const IMAGES = {
   heavyTyresSector: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=800&q=80", // High-end container crane / heavy tyre / industrial truck
   logisticsMap: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80", // Deep navy blue cargo container ship routing / map vibe
   uaeBusiness: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1000&q=80", // Abu Dhabi business tower
+  mechanicalToolsSector: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80", // Mechanics tools / workshop
+  safetySector: "images/safety-equipment-ppe.avif", // Safety helmet / PPE
+  hvacSector: "images/hvac-trends-and-innovations.webp", // HVAC / air conditioning unit
 };
 
 export const INDUSTRY_CARDS: IndustryCard[] = [
@@ -92,6 +95,45 @@ export const INDUSTRY_CARDS: IndustryCard[] = [
     iconName: "Truck",
     image: IMAGES.heavyTyresSector,
     layoutStyle: "minimal" // Sleek, modern text-focus layout with dynamic slide-reveal
+  },
+  {
+    id: "mechanical-tools",
+    title: "Mechanical Tools & Workshop Equipment Trading",
+    items: [
+      "Hand tools and professional tool sets",
+      "Pneumatic tools and air compressors",
+      "Torque wrenches and measuring instruments",
+      "Workshop storage and organization systems"
+    ],
+    iconName: "Wrench",
+    image: IMAGES.mechanicalToolsSector,
+    layoutStyle: "tools"
+  },
+  {
+    id: "safety-trading",
+    title: "Safety Equipment & PPE Trading",
+    items: [
+      "Personal protective equipment (PPE)",
+      "Fire extinguishers & suppression systems",
+      "Gas detection monitors and safety signage",
+      "Industrial safety workwear and gear"
+    ],
+    iconName: "ShieldCheck",
+    image: IMAGES.safetySector,
+    layoutStyle: "safety"
+  },
+  {
+    id: "hvac-trading",
+    title: "HVAC Systems & Climate Solutions Trading",
+    items: [
+      "Central air conditioning chillers",
+      "Ducted split system AC units",
+      "Ventilation fans and air handling units",
+      "Smart thermostatic control systems"
+    ],
+    iconName: "Thermometer",
+    image: IMAGES.hvacSector,
+    layoutStyle: "hvac"
   }
 ];
 
@@ -135,11 +177,35 @@ export const FEATURED_PRODUCTS: FeaturedProduct[] = [
     description: "Indestructible multi-ply steel reinforced tyres tailored specifically for heavy haulage logistics, fleet transit, massive dumper trucks, and desert-ready excavation equipment.",
     image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80",
     specs: ["Logistics & Cargo Truck Fleet Tyres", "Heavy Bus Steel Radial Tyres", "Robust Earthmover Tread Tyres", "Industrial Crane Multi-Directional Tyres"]
+  },
+  {
+    id: "feat-mechanical-tools",
+    category: "Mechanical Tools",
+    tagline: "Professional Grade Workshop Solutions",
+    description: "Premium mechanical tools, pneumatic systems, and workshop equipment engineered for continuous heavy-duty service in Abu Dhabi's industrial and automotive sectors.",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
+    specs: ["Chrome-Vanadium Steel Hand Tool Sets", "High-Torque Pneumatic Impact Wrenches", "Digital Torque & Calibration Instruments", "Industrial Modular Workshop Cabinets"]
+  },
+  {
+    id: "feat-safety",
+    category: "Safety Equipment",
+    tagline: "Comprehensive Workplace Protection",
+    description: "Full-spectrum safety solutions including PPE, fire suppression systems, and gas detection equipment, all certified to international and UAE civil defense standards.",
+    image: "images/safety-equipment-ppe.avif",
+    specs: ["ANSI/EN Approved Safety Helmets", "Civil Defense Listed Fire Extinguishers", "Multi-Gas Confined Space Detectors", "High-Visibility Protective Workwear"]
+  },
+  {
+    id: "feat-hvac",
+    category: "HVAC Systems",
+    tagline: "Cooling Engineered for the GCC",
+    description: "High-efficiency HVAC systems, ventilation equipment, and climate control solutions designed to perform reliably under extreme Middle Eastern temperatures.",
+    image: "images/hvac-trends-and-innovations.webp",
+    specs: ["Inverter Ducted Split AC Units (5 Ton)", "Commercial Air Handling Units (AHU)", "Industrial Ventilation Exhaust Fans", "Smart Energy Management Thermostats"]
   }
 ];
 
 export const BUSINESS_STATS: BusinessStat[] = [
-  { value: "25+", label: "Product Categories" },
+  { value: "28+", label: "Product Categories" },
   { value: "500+", label: "Products Supplied" },
   { value: "100+", label: "Business Clients" },
   { value: "24/7", label: "Customer Support" }

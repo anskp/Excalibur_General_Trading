@@ -6,7 +6,7 @@ export interface IndustryCard {
   items: string[];
   iconName: string;
   image: string;
-  layoutStyle: 'full' | 'split' | 'grid' | 'featured' | 'minimal';
+  layoutStyle: 'full' | 'split' | 'grid' | 'featured' | 'minimal' | 'tools' | 'safety' | 'hvac';
 }
 
 export interface FeaturedProduct {

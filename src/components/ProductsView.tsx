@@ -105,6 +105,54 @@ const PRODUCT_CATALOGUE_DATA = [
       { name: "High-Performance Graphics Card (16GB)", model: "EX-C-GPU16", price: "Direct Batch Supply" },
       { name: "Commercial Multifunction Laser Printer", model: "EX-P-MFP40", price: "Warranty & Install Included" }
     ]
+  },
+  {
+    category: "Mechanical Tools & Workshop Equipment Trading",
+    description: "We supply premium-grade mechanical tools, pneumatic systems, and workshop equipment designed for heavy-duty industrial applications across Abu Dhabi's manufacturing and automotive service sectors.",
+    image: IMAGES.mechanicalToolsSector,
+    features: [
+      "Chrome-vanadium steel hand tools with ergonomic anti-slip grips",
+      "High-torque pneumatic impact wrenches and air compressor systems",
+      "Precision digital torque wrenches and measurement instruments",
+      "Industrial-grade tool storage cabinets and workshop organization systems"
+    ],
+    gallery: [
+      { name: "Heavy Duty Mechanic Tool Set (180 Pcs)", model: "EX-MT-180", price: "Industrial Grade" },
+      { name: "Professional Pneumatic Impact Wrench", model: "EX-MT-PW1", price: "High Torque Spec" },
+      { name: "Digital Torque Wrench Set (10-150 Nm)", model: "EX-MT-DT50", price: "Calibrated Certified" }
+    ]
+  },
+  {
+    category: "Safety Equipment & PPE Trading",
+    description: "Excalibur provides comprehensive safety solutions including personal protective equipment, industrial safety gear, and fire protection systems certified to international and UAE civil defense standards.",
+    image: IMAGES.safetySector,
+    features: [
+      "Industrial safety helmets and face shields meeting ANSI/EN standards",
+      "Fire extinguishers and suppression systems with civil defense approvals",
+      "High-visibility safety vests and protective industrial workwear",
+      "Multi-gas detection monitors and workplace safety signage systems"
+    ],
+    gallery: [
+      { name: "Industrial Safety Helmet (ANSI Approved)", model: "EX-S-HLM1", price: "Impact Rated" },
+      { name: "ABC Dry Chemical Fire Extinguisher (6kg)", model: "EX-S-FX6", price: "Civil Defense Listed" },
+      { name: "Multi-Gas Detector Monitor (4-in-1)", model: "EX-S-GD4", price: "Confined Space Rated" }
+    ]
+  },
+  {
+    category: "HVAC Systems & Climate Solutions Trading",
+    description: "We supply high-efficiency HVAC systems, ventilation equipment, and climate control solutions for commercial, industrial, and residential applications across the GCC region, engineered for extreme ambient temperatures.",
+    image: IMAGES.hvacSector,
+    features: [
+      "Central air conditioning chillers with inverter compressor technology",
+      "Ducted split systems designed for +50°C ambient temperatures",
+      "Industrial ventilation fans and custom air handling units (AHUs)",
+      "Smart thermostatic controls with integrated energy management systems"
+    ],
+    gallery: [
+      { name: "Inverter Ducted Split AC Unit (5 Ton)", model: "EX-HV-DS5", price: "High SEER Rated" },
+      { name: "Commercial Air Handling Unit", model: "EX-HV-AHU40", price: "Custom Configurable" },
+      { name: "Industrial Exhaust Fan System (24 inch)", model: "EX-HV-EF24", price: "Heavy Duty Ventilation" }
+    ]
   }
 ];
 
@@ -126,7 +174,7 @@ export default function ProductsView({ onChangePage }: ProductsViewProps) {
             Products & division Divisions
           </h1>
           <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto font-light font-sans font-light">
-            Explore our six specialized general trading divisions. We manage the full procurement lifecyle—from source factory compliance checks to GCC land customs dispatch.
+            Explore our nine specialized general trading divisions. We manage the full procurement lifecyle—from source factory compliance checks to GCC land customs dispatch.
           </p>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { PageType } from '../types';
 import { 
@@ -14,6 +14,8 @@ import {
   Tv, 
   Disc, 
   Truck, 
+  Wrench,
+  Thermometer,
   ArrowRight, 
   Award, 
   ShieldCheck, 
@@ -34,6 +36,8 @@ const getIcon = (name: string, className = "w-6 h-6") => {
     case 'Tv': return <Tv className={className} />;
     case 'Disc': return <Disc className={className} />;
     case 'Truck': return <Truck className={className} />;
+    case 'Wrench': return <Wrench className={className} />;
+    case 'Thermometer': return <Thermometer className={className} />;
     default: return <Briefcase className={className} />;
   }
 };
@@ -44,6 +48,8 @@ export default function HomeView({ onChangePage }: HomeViewProps) {
     onChangePage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const [expandedMarket, setExpandedMarket] = useState<string | null>(null);
 
   return (
     <div className="bg-[#F4F4F4] min-h-screen text-[#111827] font-sans" id="home-view">
@@ -226,38 +232,56 @@ export default function HomeView({ onChangePage }: HomeViewProps) {
               description: 'Procurement of enterprise PCs, high-definition graphics cards, modern server structures, network equipment, and multifunction commercial printers.',
               products: ['Graphics Cards', 'Enterprise Workstations', 'Multifunction Printers', 'Network Switches']
             }
-          ].map((market) => (
+            ].map((market) => (
             <div
               key={market.id}
-              onClick={() => handleNavClick('products')}
-              className="relative h-[90px] hover:h-[380px] md:hover:h-[320px] overflow-hidden transition-all duration-500 ease-in-out cursor-pointer group border-b border-[#2F394D]/50"
+              onClick={() => {
+                if (expandedMarket === market.id) {
+                  handleNavClick('products');
+                } else {
+                  setExpandedMarket(market.id);
+                }
+              }}
+              className={`relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer group border-b border-[#2F394D]/50 ${
+                expandedMarket === market.id ? 'h-[380px] md:h-[320px]' : 'h-[90px]'
+              } hover:h-[380px] md:hover:h-[320px]`}
             >
-              {/* Image background fading in on hover with increased visibility */}
+              {/* Image background fading in on hover/tap with increased visibility */}
               <img
                 src={market.image}
                 alt={market.title}
-                className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none ${
+                  expandedMarket === market.id ? 'opacity-100' : 'opacity-0'
+                } group-hover:opacity-100`}
                 referrerPolicy="no-referrer"
               />
 
-              {/* Tinted overlay backdrop - lightens completely on hover to reveal the image beautifully */}
-              <div className="absolute inset-0 bg-[#1D2636]/95 group-hover:bg-[#1D2636]/10 transition-colors duration-300"></div>
+              {/* Tinted overlay backdrop - lightens completely on hover/tap to reveal the image beautifully */}
+              <div className={`absolute inset-0 transition-colors duration-300 ${
+                expandedMarket === market.id ? 'bg-[#1D2636]/10' : 'bg-[#1D2636]/95'
+              } group-hover:bg-[#1D2636]/10`}></div>
 
               {/* Main row layout */}
               <div className="relative z-10 h-full flex flex-col justify-between">
                 {/* Title row (visible at 90px height) */}
                 <div className="h-[90px] flex items-center justify-between px-6 sm:px-12">
-                  <h2 className="text-white text-2xl sm:text-4xl lg:text-4xl font-extralight tracking-wide select-none group-hover:text-[#0EA5E9] transition-colors duration-300">
+                  <h2 className={`text-2xl sm:text-4xl lg:text-4xl font-extralight tracking-wide select-none transition-colors duration-300 ${
+                    expandedMarket === market.id ? 'text-[#0EA5E9]' : 'text-white'
+                  } group-hover:text-[#0EA5E9]`}>
                     {market.title}
                   </h2>
                   <div className="flex items-center space-x-2 text-xs font-mono text-zinc-400 group-hover:text-[#0EA5E9] transition-colors">
                     <span className="hidden sm:inline">VIEW WHOLESALE CATALOG</span>
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${
+                      expandedMarket === market.id ? 'translate-x-2' : ''
+                    } group-hover:translate-x-2`} />
                   </div>
                 </div>
 
                 {/* Expanded content section */}
-                <div className="h-[290px] md:h-[230px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 px-6 sm:px-12 pb-8 overflow-hidden">
+                <div className={`transition-opacity duration-300 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 px-6 sm:px-12 pb-8 overflow-hidden ${
+                  expandedMarket === market.id ? 'opacity-100' : 'opacity-0'
+                } group-hover:opacity-100 h-[290px] md:h-[230px]`}>
                   <div className="flex-1 space-y-4">
                     <p className="text-gray-200 text-xs sm:text-sm leading-relaxed max-w-2xl font-sans drop-shadow-md">
                       {market.description}
@@ -299,7 +323,7 @@ export default function HomeView({ onChangePage }: HomeViewProps) {
               Core Industries We Serve
             </h2>
             <p className="text-gray-600 text-sm">
-              We operate across five elite operational segments in general trading, utilizing custom-tooled sourcing methodologies for each department.
+              We operate across eight elite operational segments in general trading, utilizing custom-tooled sourcing methodologies for each department.
             </p>
           </div>
 
@@ -511,6 +535,120 @@ export default function HomeView({ onChangePage }: HomeViewProps) {
                 referrerPolicy="no-referrer"
               />
             </div>
+          </div>
+
+          {/* Row 2: New Categories - Mechanical Tools, Safety, HVAC */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8" id="industries-cards-row-2">
+
+            {/* Card 6: Mechanical Tools */}
+            <div
+              className="bg-white border border-gray-200 p-6 flex flex-col justify-between shadow-sm"
+              id="ind-card-mechanical-tools"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="p-1.5 bg-[#1D2636] text-[#0EA5E9]">
+                      {getIcon(INDUSTRY_CARDS[5].iconName, "w-4 h-4")}
+                    </span>
+                    <span className="text-xs uppercase tracking-wider text-[#1D2636] font-bold">Tools & Workshop</span>
+                  </div>
+                  <span className="text-xs font-mono text-gray-500">M14 DEPOT</span>
+                </div>
+                <h3 className="font-heading text-lg font-bold text-[#1D2636] mb-3">
+                  {INDUSTRY_CARDS[5].title}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-2">
+                  {INDUSTRY_CARDS[5].items.map((item, idx) => (
+                    <div key={idx} className="bg-[#F4F4F4] px-3 py-2 border border-gray-200 text-xs font-medium text-gray-700 flex items-center justify-between">
+                      <span>{item}</span>
+                      <span className="text-[9px] text-gray-400 font-mono">IN STOCK</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button
+                onClick={() => handleNavClick('products')}
+                className="mt-6 inline-flex items-center space-x-1.5 text-xs font-semibold text-[#0EA5E9] hover:text-[#1D2636] transition-colors cursor-pointer self-start"
+              >
+                <span>View tool catalogs</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+
+            {/* Card 7: Safety Equipment */}
+            <div
+              className="bg-white border-2 border-[#0EA5E9]/30 p-6 relative overflow-hidden flex flex-col justify-between"
+              id="ind-card-safety"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#0EA5E9]/10 rounded-bl-full flex items-center justify-center pointer-events-none">
+                <ShieldCheck className="w-8 h-8 text-[#0EA5E9]/40" />
+              </div>
+              <div>
+                <span className="text-[10px] tracking-widest text-[#0EA5E9] uppercase font-bold">Department 06</span>
+                <h3 className="font-heading text-lg font-bold text-[#1D2636] mt-1 mb-2">
+                  {INDUSTRY_CARDS[6].title}
+                </h3>
+                <p className="text-gray-500 text-xs mb-4">
+                  Fully certified PPE, fire safety, and gas detection equipment compliant with UAE civil defense and international safety standards.
+                </p>
+                <div className="space-y-2">
+                  {INDUSTRY_CARDS[6].items.map((item, idx) => (
+                    <div key={idx} className="flex items-center space-x-3 text-xs text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-[#0EA5E9] flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button
+                onClick={() => handleNavClick('products')}
+                className="mt-6 inline-flex items-center space-x-1.5 text-xs font-semibold text-[#1D2636] hover:text-[#0EA5E9] transition-colors cursor-pointer self-start"
+              >
+                <span>Safety compliance specs</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#0EA5E9]" />
+              </button>
+            </div>
+
+            {/* Card 8: HVAC Systems */}
+            <div
+              className="bg-[#EFEFEF] border border-gray-300 p-6 flex flex-col justify-between"
+              id="ind-card-hvac"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="p-1.5 bg-[#2F394D] text-[#0EA5E9]">
+                      {getIcon(INDUSTRY_CARDS[7].iconName, "w-4 h-4")}
+                    </span>
+                    <span className="text-xs uppercase tracking-wider text-[#2F394D] font-bold">Climate Control</span>
+                  </div>
+                  <span className="text-xs font-mono text-gray-500">GCC SPEC</span>
+                </div>
+                <h3 className="font-heading text-lg font-bold text-[#1D2636] mb-3">
+                  {INDUSTRY_CARDS[7].title}
+                </h3>
+                <p className="text-gray-600 text-xs mb-4 leading-relaxed">
+                  High-SEER rated cooling systems and industrial ventilation engineered for extreme ambient temperatures across the UAE.
+                </p>
+                <div className="space-y-2 mt-2">
+                  {INDUSTRY_CARDS[7].items.map((item, idx) => (
+                    <div key={idx} className="flex items-center space-x-2 text-xs text-gray-700 bg-white p-2 border border-gray-200">
+                      <span className="w-1.5 h-1.5 bg-[#0EA5E9]"></span>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button
+                onClick={() => handleNavClick('products')}
+                className="mt-6 inline-flex items-center space-x-1.5 text-xs font-semibold text-[#1D2636] hover:text-[#0EA5E9] transition-colors cursor-pointer self-start"
+              >
+                <span>Cooling load calculator</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#0EA5E9]" />
+              </button>
+            </div>
+
           </div>
 
         </div>
