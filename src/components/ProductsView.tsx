@@ -11,22 +11,6 @@ interface ProductsViewProps {
 // 5 detailed lists of active products for realistic representation
 const PRODUCT_CATALOGUE_DATA = [
   {
-    category: "Restaurant & Kitchen Equipment Trading",
-    description: "Our high-performance culinary systems and commercial refrigeration options are configured to minimize operating costs while maximizing safety and hygiene parameters in intensive commercial establishments.",
-    image: IMAGES.kitchenSector,
-    features: [
-      "Grade 304 food-safety stainless steel construction across all counters & tables",
-      "Gas and electrical safety certifications matching UAE civil defense mandates",
-      "Dynamic refrigeration coils tested up to +43°C ambient kitchen temperatures",
-      "Custom ventilation hoods with integrated automated fire suppression"
-    ],
-    gallery: [
-      { name: "Heavy Duty Multi-Deck Gas Range", model: "EX-K-R6", price: "Contact for bulk quotes" },
-      { name: "Blast Chiller and Freezer System", model: "EX-K-BC10", price: "Certified GCC Standard" },
-      { name: "Industrial Dough Kneader & Baker", model: "EX-K-DK40", price: "Warranty Included" }
-    ]
-  },
-  {
     category: "Mechanical Equipment Trading",
     description: "Excalibur supplies precision mechanic tool setups and specialized pneumatic components built to withstand heavy manufacturing duty stresses without failure.",
     image: IMAGES.mechanicalSector,
@@ -40,6 +24,70 @@ const PRODUCT_CATALOGUE_DATA = [
       { name: "Automated CNC Lathe Station", model: "EX-M-CNC", price: "Direct Manufacturer Sourcing" },
       { name: "Industrial Hydraulic Bench Press", model: "EX-M-HYD20", price: "Tested & Approved" },
       { name: "Mechanics Premium Tool Cabinet (120 Pcs)", model: "EX-M-TC120", price: "High Grade Alloys" }
+    ]
+  },
+  {
+    category: "Mechanical Tools & Workshop Equipment Trading",
+    description: "We supply premium-grade mechanical tools, pneumatic systems, and workshop equipment designed for heavy-duty industrial applications across Abu Dhabi's manufacturing and automotive service sectors.",
+    image: IMAGES.mechanicalToolsSector,
+    features: [
+      "Chrome-vanadium steel hand tools with ergonomic anti-slip grips",
+      "High-torque pneumatic impact wrenches and air compressor systems",
+      "Precision digital torque wrenches and measurement instruments",
+      "Industrial-grade tool storage cabinets and workshop organization systems"
+    ],
+    gallery: [
+      { name: "Heavy Duty Mechanic Tool Set (180 Pcs)", model: "EX-MT-180", price: "Industrial Grade" },
+      { name: "Professional Pneumatic Impact Wrench", model: "EX-MT-PW1", price: "High Torque Spec" },
+      { name: "Digital Torque Wrench Set (10-150 Nm)", model: "EX-MT-DT50", price: "Calibrated Certified" }
+    ]
+  },
+  {
+    category: "Safety Equipment & PPE Trading",
+    description: "Excalibur provides comprehensive safety solutions including personal protective equipment, industrial safety gear, and fire protection systems certified to international and UAE civil defense standards.",
+    image: IMAGES.safetySector,
+    features: [
+      "Industrial safety helmets and face shields meeting ANSI/EN standards",
+      "Fire extinguishers and suppression systems with civil defense approvals",
+      "High-visibility safety vests and protective industrial workwear",
+      "Multi-gas detection monitors and workplace safety signage systems"
+    ],
+    gallery: [
+      { name: "Industrial Safety Helmet (ANSI Approved)", model: "EX-S-HLM1", price: "Impact Rated" },
+      { name: "ABC Dry Chemical Fire Extinguisher (6kg)", model: "EX-S-FX6", price: "Civil Defense Listed" },
+      { name: "Multi-Gas Detector Monitor (4-in-1)", model: "EX-S-GD4", price: "Confined Space Rated" }
+    ]
+  },
+  {
+    category: "HVAC Systems & Climate Solutions Trading",
+    description: "We supply high-efficiency HVAC systems, ventilation equipment, and climate control solutions for commercial, industrial, and residential applications across the GCC region, engineered for extreme ambient temperatures.",
+    image: IMAGES.hvacSector,
+    features: [
+      "Central air conditioning chillers with inverter compressor technology",
+      "Ducted split systems designed for +50°C ambient temperatures",
+      "Industrial ventilation fans and custom air handling units (AHUs)",
+      "Smart thermostatic controls with integrated energy management systems"
+    ],
+    gallery: [
+      { name: "Inverter Ducted Split AC Unit (5 Ton)", model: "EX-HV-DS5", price: "High SEER Rated" },
+      { name: "Commercial Air Handling Unit", model: "EX-HV-AHU40", price: "Custom Configurable" },
+      { name: "Industrial Exhaust Fan System (24 inch)", model: "EX-HV-EF24", price: "Heavy Duty Ventilation" }
+    ]
+  },
+  {
+    category: "Restaurant & Kitchen Equipment Trading",
+    description: "Our high-performance culinary systems and commercial refrigeration options are configured to minimize operating costs while maximizing safety and hygiene parameters in intensive commercial establishments.",
+    image: IMAGES.kitchenSector,
+    features: [
+      "Grade 304 food-safety stainless steel construction across all counters & tables",
+      "Gas and electrical safety certifications matching UAE civil defense mandates",
+      "Dynamic refrigeration coils tested up to +43°C ambient kitchen temperatures",
+      "Custom ventilation hoods with integrated automated fire suppression"
+    ],
+    gallery: [
+      { name: "Heavy Duty Multi-Deck Gas Range", model: "EX-K-R6", price: "Contact for bulk quotes" },
+      { name: "Blast Chiller and Freezer System", model: "EX-K-BC10", price: "Certified GCC Standard" },
+      { name: "Industrial Dough Kneader & Baker", model: "EX-K-DK40", price: "Warranty Included" }
     ]
   },
   {
@@ -104,54 +152,6 @@ const PRODUCT_CATALOGUE_DATA = [
       { name: "Professional Workstation PC Unit", model: "EX-C-W100", price: "Bulk Corporate Quotes Only" },
       { name: "High-Performance Graphics Card (16GB)", model: "EX-C-GPU16", price: "Direct Batch Supply" },
       { name: "Commercial Multifunction Laser Printer", model: "EX-P-MFP40", price: "Warranty & Install Included" }
-    ]
-  },
-  {
-    category: "Mechanical Tools & Workshop Equipment Trading",
-    description: "We supply premium-grade mechanical tools, pneumatic systems, and workshop equipment designed for heavy-duty industrial applications across Abu Dhabi's manufacturing and automotive service sectors.",
-    image: IMAGES.mechanicalToolsSector,
-    features: [
-      "Chrome-vanadium steel hand tools with ergonomic anti-slip grips",
-      "High-torque pneumatic impact wrenches and air compressor systems",
-      "Precision digital torque wrenches and measurement instruments",
-      "Industrial-grade tool storage cabinets and workshop organization systems"
-    ],
-    gallery: [
-      { name: "Heavy Duty Mechanic Tool Set (180 Pcs)", model: "EX-MT-180", price: "Industrial Grade" },
-      { name: "Professional Pneumatic Impact Wrench", model: "EX-MT-PW1", price: "High Torque Spec" },
-      { name: "Digital Torque Wrench Set (10-150 Nm)", model: "EX-MT-DT50", price: "Calibrated Certified" }
-    ]
-  },
-  {
-    category: "Safety Equipment & PPE Trading",
-    description: "Excalibur provides comprehensive safety solutions including personal protective equipment, industrial safety gear, and fire protection systems certified to international and UAE civil defense standards.",
-    image: IMAGES.safetySector,
-    features: [
-      "Industrial safety helmets and face shields meeting ANSI/EN standards",
-      "Fire extinguishers and suppression systems with civil defense approvals",
-      "High-visibility safety vests and protective industrial workwear",
-      "Multi-gas detection monitors and workplace safety signage systems"
-    ],
-    gallery: [
-      { name: "Industrial Safety Helmet (ANSI Approved)", model: "EX-S-HLM1", price: "Impact Rated" },
-      { name: "ABC Dry Chemical Fire Extinguisher (6kg)", model: "EX-S-FX6", price: "Civil Defense Listed" },
-      { name: "Multi-Gas Detector Monitor (4-in-1)", model: "EX-S-GD4", price: "Confined Space Rated" }
-    ]
-  },
-  {
-    category: "HVAC Systems & Climate Solutions Trading",
-    description: "We supply high-efficiency HVAC systems, ventilation equipment, and climate control solutions for commercial, industrial, and residential applications across the GCC region, engineered for extreme ambient temperatures.",
-    image: IMAGES.hvacSector,
-    features: [
-      "Central air conditioning chillers with inverter compressor technology",
-      "Ducted split systems designed for +50°C ambient temperatures",
-      "Industrial ventilation fans and custom air handling units (AHUs)",
-      "Smart thermostatic controls with integrated energy management systems"
-    ],
-    gallery: [
-      { name: "Inverter Ducted Split AC Unit (5 Ton)", model: "EX-HV-DS5", price: "High SEER Rated" },
-      { name: "Commercial Air Handling Unit", model: "EX-HV-AHU40", price: "Custom Configurable" },
-      { name: "Industrial Exhaust Fan System (24 inch)", model: "EX-HV-EF24", price: "Heavy Duty Ventilation" }
     ]
   }
 ];

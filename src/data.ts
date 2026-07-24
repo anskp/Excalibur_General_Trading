@@ -28,21 +28,6 @@ export const IMAGES = {
 
 export const INDUSTRY_CARDS: IndustryCard[] = [
   {
-    id: "kitchen-trading",
-    title: "Restaurant & Kitchen Equipment Trading",
-    items: [
-      "Industrial cooking equipment",
-      "Refrigeration systems",
-      "Food preparation machinery",
-      "Stainless steel kitchen solutions",
-      "Bakery and catering equipment",
-      "Kitchen outfit and accessories"
-    ],
-    iconName: "ChefHat",
-    image: IMAGES.kitchenSector,
-    layoutStyle: "split" // Image left/right split card layout
-  },
-  {
     id: "mechanical-trading",
     title: "Mechanical Equipment Trading",
     items: [
@@ -53,48 +38,7 @@ export const INDUSTRY_CARDS: IndustryCard[] = [
     ],
     iconName: "Settings",
     image: IMAGES.mechanicalSector,
-    layoutStyle: "full" // Bold full card preview with dark overlay overlay
-  },
-  {
-    id: "appliances-trading",
-    title: "Home Appliances Trading",
-    items: [
-      "Refrigerators and freezers",
-      "Washing machines",
-      "Air-conditioning accessories",
-      "Electrical appliances",
-      "Home utility equipment"
-    ],
-    iconName: "Tv",
-    image: IMAGES.appliancesSector,
-    layoutStyle: "grid" // Modular item-grid structure
-  },
-  {
-    id: "car-tyres-trading",
-    title: "Cars Tyres & Accessories Trading",
-    items: [
-      "Passenger vehicle tyres",
-      "Automotive accessories",
-      "Vehicle consumables",
-      "Maintenance accessories"
-    ],
-    iconName: "Disc", // Wheel / disk representation
-    image: IMAGES.carTyresSector,
-    layoutStyle: "featured" // Accent-highlighted layout border
-  },
-  {
-    id: "heavy-tyres-trading",
-    title: "Heavy Vehicles & Equipment Tyres Trading",
-    items: [
-      "Truck tyres",
-      "Bus tyres",
-      "Construction equipment tyres",
-      "Industrial machinery tyres",
-      "Off-road tyres"
-    ],
-    iconName: "Truck",
-    image: IMAGES.heavyTyresSector,
-    layoutStyle: "minimal" // Sleek, modern text-focus layout with dynamic slide-reveal
+    layoutStyle: "full"
   },
   {
     id: "mechanical-tools",
@@ -134,6 +78,62 @@ export const INDUSTRY_CARDS: IndustryCard[] = [
     iconName: "Thermometer",
     image: IMAGES.hvacSector,
     layoutStyle: "hvac"
+  },
+  {
+    id: "kitchen-trading",
+    title: "Restaurant & Kitchen Equipment Trading",
+    items: [
+      "Industrial cooking equipment",
+      "Refrigeration systems",
+      "Food preparation machinery",
+      "Stainless steel kitchen solutions",
+      "Bakery and catering equipment",
+      "Kitchen outfit and accessories"
+    ],
+    iconName: "ChefHat",
+    image: IMAGES.kitchenSector,
+    layoutStyle: "split"
+  },
+  {
+    id: "appliances-trading",
+    title: "Home Appliances Trading",
+    items: [
+      "Refrigerators and freezers",
+      "Washing machines",
+      "Air-conditioning accessories",
+      "Electrical appliances",
+      "Home utility equipment"
+    ],
+    iconName: "Tv",
+    image: IMAGES.appliancesSector,
+    layoutStyle: "grid"
+  },
+  {
+    id: "car-tyres-trading",
+    title: "Cars Tyres & Accessories Trading",
+    items: [
+      "Passenger vehicle tyres",
+      "Automotive accessories",
+      "Vehicle consumables",
+      "Maintenance accessories"
+    ],
+    iconName: "Disc",
+    image: IMAGES.carTyresSector,
+    layoutStyle: "featured"
+  },
+  {
+    id: "heavy-tyres-trading",
+    title: "Heavy Vehicles & Equipment Tyres Trading",
+    items: [
+      "Truck tyres",
+      "Bus tyres",
+      "Construction equipment tyres",
+      "Industrial machinery tyres",
+      "Off-road tyres"
+    ],
+    iconName: "Truck",
+    image: IMAGES.heavyTyresSector,
+    layoutStyle: "minimal"
   }
 ];
 
@@ -143,7 +143,7 @@ export const FEATURED_PRODUCTS: FeaturedProduct[] = [
     category: "Kitchen Equipment",
     tagline: "High-Performance Culinary Solutions",
     description: "Equipping world-class restaurants, hotels, and bakery ventures. Our industrial-grade kitchen systems are fully customized and built from heavy-gauge stainless steel for ultimate hygiene, compliance, and thermal performance.",
-    image: "https://images.unsplash.com/photo-1590674899484-d564fa7e2311?auto=format&fit=crop&w=800&q=80",
+    image: "images/kitchen-equipment.png",
     specs: ["Heavy-Duty Gas Ranges", "Multi-Deck Baking Ovens", "Blast Chillers & Freezers", "Smart Food Prep Machinery"]
   },
   {
